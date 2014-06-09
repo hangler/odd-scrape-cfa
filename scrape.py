@@ -21,6 +21,7 @@ def write_headers_to_tab():
     headers += "lang\t"
     headers += "country\t"
     headers += "created_for\t"
+    headers += "platforms\t"
     headers += "source_code\t"
     headers += "technology\t"
     for x in range(1, 10):
@@ -86,6 +87,7 @@ def parse_app_page(page_url):
     write("EN")                     # Language
     write("USA")                    # Country
     write(parse_created_for(soup))
+    write("Web")                    # Platforms
     write(parse_source_code(soup))
     write(parse_technology(soup))
     write("\t".join(parse_developers(soup)))    # Developers
